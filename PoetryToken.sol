@@ -7,6 +7,8 @@ contract PoetryToken is ERC721 {
     uint256 private _tokenIdCounter;
     mapping(uint256 => string) private _poetryText;
 
+    event PoetryPublished(address indexed author, uint256 indexed tokenId, string poetryText);
+
     constructor() ERC721("PoetryToken", "PT") {}
 
     function publishPoetry(string memory poetryText) external returns (uint256) {
@@ -24,5 +26,6 @@ contract PoetryToken is ERC721 {
     function _setPoetryText(uint256 tokenId, string memory poetryText) private {
         require(_ownerOf(tokenId) != address(0), "Token doesn't exist");
         _poetryText[tokenId] = poetryText;
+        emit PoetryPublished(msg.sender, _tokenIdCounter, poetryText);
     }
 }
