@@ -1,8 +1,8 @@
 # dlt-smart-contract-hw
 
-1. Launch `https://remix.ethereum.org/`
+1. Launch [https://remix.ethereum.org/](https://remix.ethereum.org/)
 2. Create a new project
-2. Copy `PoetryToken.sol`
+2. Copy [PoetryToken.sol](PoetryToken.sol)
 3. Compile & run the script
 
 ---
