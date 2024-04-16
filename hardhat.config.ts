@@ -1,10 +1,6 @@
-/**
-* @type import('hardhat/config').HardhatUserConfig
-*/
-
 require('dotenv').config();
+require("@nomicfoundation/hardhat-toolbox")
 require("@nomiclabs/hardhat-ethers");
-require("@nomiclabs/hardhat-etherscan")
 
 const { API_URL, PRIVATE_KEY } = process.env;
 
