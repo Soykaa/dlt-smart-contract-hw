@@ -3,6 +3,7 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
+// Author: @soykaa
 contract PoetryToken is ERC721 {
     uint256 public tokenIdCounter;
     mapping(uint256 => string) private _poetryMapping;
